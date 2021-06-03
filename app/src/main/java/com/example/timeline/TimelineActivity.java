@@ -31,13 +31,13 @@ public class TimelineActivity extends AppCompatActivity {
 
         CustomAdapter customadapter = new CustomAdapter (getApplicationContext(), country_names, country_flags);
         listview.setAdapter(customadapter);
-        //int i = country_names.length;
-//        listview.setOnItemClickListener( new AdapterView.OnItemClickListener()  {
-//            @Override
-//            public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
-//                Toast.makeText(TimelineActivity.this, "Clicked on this country", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
+        listview.setOnItemClickListener( new AdapterView.OnItemClickListener()  {
+            @Override
+            public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+                Toast.makeText(TimelineActivity.this, "Clicked on this country", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

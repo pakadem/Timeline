@@ -39,14 +39,13 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        //view = inflter.inflate(R.layout.tl_row_item, null);
-        View rowView = inflter.inflate(R.layout.tl_row_item, null,true);
+        view = inflter.inflate(R.layout.tl_row_item, null);
         TextView country = (TextView) view.findViewById(R.id.item_textView);
         ImageView flag = (ImageView) view.findViewById(R.id.img_flag);
         country.setText(country_names[i]);
         flag.setImageResource(country_flags[i]);
 
-        return rowView;
+        return view;
     }
 
 }
